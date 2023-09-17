@@ -62,3 +62,7 @@ export function getDisplayDPI(index: number) {
 export function getDisplayOrientation(index: number): SDL_DISPLAY_ORIENTATION_INNER {
     return errorCheck(SDL_video_h.SDL_GetDisplayOrientation(index)) as SDL_DISPLAY_ORIENTATION_INNER
 }
+
+export function getNumDisplayModes(displayIndex: number) {
+    return errorCheck(SDL_video_h.SDL_GetNumDisplayModes(displayIndex));
+}

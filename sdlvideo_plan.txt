@@ -7,6 +7,7 @@ Simple exports:
     SDL_GetNumVideoDisplays [OK]
     SDL_GetDisplayName [OK]
     SDL_GetDisplayOrientation [OK]
+    SDL_GetNumDisplayModes
 
 Complex exports (special types, pointers and all that bullshit):
             SDL_GetDisplayBounds [OK]
@@ -15,7 +16,6 @@ Complex exports (special types, pointers and all that bullshit):
 
 
 Unaccounted for:
-extern DECLSPEC int SDLCALL SDL_GetNumDisplayModes(int displayIndex);
 extern DECLSPEC int SDLCALL SDL_GetDisplayMode(int displayIndex, int modeIndex,
 extern DECLSPEC int SDLCALL SDL_GetDesktopDisplayMode(int displayIndex, SDL_DisplayMode * mode);
 extern DECLSPEC int SDLCALL SDL_GetCurrentDisplayMode(int displayIndex, SDL_DisplayMode * mode);

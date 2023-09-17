@@ -73,6 +73,10 @@ const { symbols } = dlopen(
             SDL_GetDisplayOrientation: {
                 args: [ FFIType.i32 ],
                 returns: FFIType.i32
+            },
+            SDL_GetNumDisplayModes: {
+                args: [ FFIType.i32 ],
+                returns: FFIType.i32
             }
         }, // SDL_video.h
     }
@@ -102,6 +106,7 @@ export const SDL_video_h = {
     SDL_GetDisplayBounds: symbols.SDL_GetDisplayBounds,
     SDL_GetDisplayUsableBounds: symbols.SDL_GetDisplayUsableBounds,
     SDL_GetDisplayDPI: symbols.SDL_GetDisplayDPI,
-    SDL_GetDisplayOrientation: symbols.SDL_GetDisplayOrientation
+    SDL_GetDisplayOrientation: symbols.SDL_GetDisplayOrientation,
+    SDL_GetNumDisplayModes: symbols.SDL_GetNumDisplayModes
 }
 

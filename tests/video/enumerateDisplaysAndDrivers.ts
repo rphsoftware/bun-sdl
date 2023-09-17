@@ -18,6 +18,7 @@ for (let index = 0; index < video.getNumVideoDrivers(); index++) {
             console.log(`- Usable Bounds: ${video.getDisplayUsableBounds(displayIndex)}`);
             console.log(`- DPI: ${JSON.stringify(video.getDisplayDPI(displayIndex))}`);
             console.log(`- Orientation: ${video.getDisplayOrientation(displayIndex)} [${orientationAsString(video.getDisplayOrientation(displayIndex))}]`)
+            console.log(`- Mode count: ${video.getNumDisplayModes(displayIndex)}`);
         }
 
         console.log("- Quitting...");
