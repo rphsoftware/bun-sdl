@@ -1,0 +1,63 @@
+Done headers and JS glue:
+- SDL
+- SDL_error (internal error check only!!)
+
+TODO:
+# Basics
+- SDL_hints
+- SDL_log
+- SDL_assert
+- SDL_version
+
+# Video
+- SDL_video [in progress!]
+- SDL_render
+- SDL_pixels
+- SDL_rect
+- SDL_surface
+- SDL_syswm
+- SDL_clipboard
+
+
+# Events
+- SDL_events
+- SDL_keyboard
+- SDL_keycode
+- SDL_scancode
+- SDL_mouse
+- SDL_joystick
+- SDL_gamecontroller
+- SDL_sensor
+
+# Force feedback
+- SDL_haptic
+
+# Audio
+- SDL_audio
+
+# Timers
+- SDL_timer
+
+# Platform and CPU information
+- SDL_platform
+- SDL_cpuinfo
+
+# Power management
+- SDL_power
+
+# Additional functionality
+- SDL_messagebox
+
+Not planned: 
+- SDL_thread
+- SDL_mutex
+- SDL_atomic
+- SDL_filesystem
+- SDL_rwops
+- SDL_vulkan
+- SDL_metal
+- SDL_loadso
+- SDL_endian
+- SDL_bits
+- SDL_system
+- SDL_stdinc

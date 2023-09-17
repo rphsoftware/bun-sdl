@@ -1,0 +1,103 @@
+Simple exports:
+    SDL_GetNumVideoDrivers [OK]
+    SDL_GetVideoDriver [OK]
+    SDL_VideoInit  [OK]
+    SDL_VideoQuit  [OK]
+    SDL_GetCurrentVideoDriver [OK]
+    SDL_GetNumVideoDisplays [OK]
+    SDL_GetDisplayName [OK]
+    SDL_GetDisplayOrientation [OK]
+
+Complex exports (special types, pointers and all that bullshit):
+            SDL_GetDisplayBounds [OK]
+            SDL_GetDisplayUsableBounds [OK]
+            SDL_GetDisplayDPI [OK]
+
+
+Unaccounted for:
+extern DECLSPEC int SDLCALL SDL_GetNumDisplayModes(int displayIndex);
+extern DECLSPEC int SDLCALL SDL_GetDisplayMode(int displayIndex, int modeIndex,
+extern DECLSPEC int SDLCALL SDL_GetDesktopDisplayMode(int displayIndex, SDL_DisplayMode * mode);
+extern DECLSPEC int SDLCALL SDL_GetCurrentDisplayMode(int displayIndex, SDL_DisplayMode * mode);
+extern DECLSPEC SDL_DisplayMode * SDLCALL SDL_GetClosestDisplayMode(int displayIndex, const SDL_DisplayMode * mode, SDL_DisplayMode * closest);
+extern DECLSPEC int SDLCALL SDL_GetPointDisplayIndex(const SDL_Point * point);
+extern DECLSPEC int SDLCALL SDL_GetRectDisplayIndex(const SDL_Rect * rect);
+extern DECLSPEC int SDLCALL SDL_GetWindowDisplayIndex(SDL_Window * window);
+extern DECLSPEC int SDLCALL SDL_SetWindowDisplayMode(SDL_Window * window,
+extern DECLSPEC int SDLCALL SDL_GetWindowDisplayMode(SDL_Window * window,
+extern DECLSPEC void* SDLCALL SDL_GetWindowICCProfile(SDL_Window * window, size_t* size);
+extern DECLSPEC Uint32 SDLCALL SDL_GetWindowPixelFormat(SDL_Window * window);
+extern DECLSPEC SDL_Window * SDLCALL SDL_CreateWindow(const char *title,
+extern DECLSPEC SDL_Window * SDLCALL SDL_CreateWindowFrom(const void *data);
+extern DECLSPEC Uint32 SDLCALL SDL_GetWindowID(SDL_Window * window);
+extern DECLSPEC SDL_Window * SDLCALL SDL_GetWindowFromID(Uint32 id);
+extern DECLSPEC Uint32 SDLCALL SDL_GetWindowFlags(SDL_Window * window);
+extern DECLSPEC void SDLCALL SDL_SetWindowTitle(SDL_Window * window,
+extern DECLSPEC const char *SDLCALL SDL_GetWindowTitle(SDL_Window * window);
+extern DECLSPEC void SDLCALL SDL_SetWindowIcon(SDL_Window * window,
+extern DECLSPEC void* SDLCALL SDL_SetWindowData(SDL_Window * window,
+extern DECLSPEC void *SDLCALL SDL_GetWindowData(SDL_Window * window,
+extern DECLSPEC void SDLCALL SDL_SetWindowPosition(SDL_Window * window,
+extern DECLSPEC void SDLCALL SDL_GetWindowPosition(SDL_Window * window,
+extern DECLSPEC void SDLCALL SDL_SetWindowSize(SDL_Window * window, int w,
+extern DECLSPEC void SDLCALL SDL_GetWindowSize(SDL_Window * window, int *w,
+extern DECLSPEC int SDLCALL SDL_GetWindowBordersSize(SDL_Window * window,
+extern DECLSPEC void SDLCALL SDL_GetWindowSizeInPixels(SDL_Window * window,
+extern DECLSPEC void SDLCALL SDL_SetWindowMinimumSize(SDL_Window * window,
+extern DECLSPEC void SDLCALL SDL_GetWindowMinimumSize(SDL_Window * window,
+extern DECLSPEC void SDLCALL SDL_SetWindowMaximumSize(SDL_Window * window,
+extern DECLSPEC void SDLCALL SDL_GetWindowMaximumSize(SDL_Window * window,
+extern DECLSPEC void SDLCALL SDL_SetWindowBordered(SDL_Window * window,
+extern DECLSPEC void SDLCALL SDL_SetWindowResizable(SDL_Window * window,
+extern DECLSPEC void SDLCALL SDL_SetWindowAlwaysOnTop(SDL_Window * window,
+extern DECLSPEC void SDLCALL SDL_ShowWindow(SDL_Window * window);
+extern DECLSPEC void SDLCALL SDL_HideWindow(SDL_Window * window);
+extern DECLSPEC void SDLCALL SDL_RaiseWindow(SDL_Window * window);
+extern DECLSPEC void SDLCALL SDL_MaximizeWindow(SDL_Window * window);
+extern DECLSPEC void SDLCALL SDL_MinimizeWindow(SDL_Window * window);
+extern DECLSPEC void SDLCALL SDL_RestoreWindow(SDL_Window * window);
+extern DECLSPEC int SDLCALL SDL_SetWindowFullscreen(SDL_Window * window,
+extern DECLSPEC SDL_bool SDLCALL SDL_HasWindowSurface(SDL_Window *window);
+extern DECLSPEC SDL_Surface * SDLCALL SDL_GetWindowSurface(SDL_Window * window);
+extern DECLSPEC int SDLCALL SDL_UpdateWindowSurface(SDL_Window * window);
+extern DECLSPEC int SDLCALL SDL_UpdateWindowSurfaceRects(SDL_Window * window,
+extern DECLSPEC int SDLCALL SDL_DestroyWindowSurface(SDL_Window *window);
+extern DECLSPEC void SDLCALL SDL_SetWindowGrab(SDL_Window * window,
+extern DECLSPEC void SDLCALL SDL_SetWindowKeyboardGrab(SDL_Window * window,
+extern DECLSPEC void SDLCALL SDL_SetWindowMouseGrab(SDL_Window * window,
+extern DECLSPEC SDL_bool SDLCALL SDL_GetWindowGrab(SDL_Window * window);
+extern DECLSPEC SDL_bool SDLCALL SDL_GetWindowKeyboardGrab(SDL_Window * window);
+extern DECLSPEC SDL_bool SDLCALL SDL_GetWindowMouseGrab(SDL_Window * window);
+extern DECLSPEC SDL_Window * SDLCALL SDL_GetGrabbedWindow(void);
+extern DECLSPEC int SDLCALL SDL_SetWindowMouseRect(SDL_Window * window, const SDL_Rect * rect);
+extern DECLSPEC const SDL_Rect * SDLCALL SDL_GetWindowMouseRect(SDL_Window * window);
+extern DECLSPEC int SDLCALL SDL_SetWindowBrightness(SDL_Window * window, float brightness);
+extern DECLSPEC float SDLCALL SDL_GetWindowBrightness(SDL_Window * window);
+extern DECLSPEC int SDLCALL SDL_SetWindowOpacity(SDL_Window * window, float opacity);
+extern DECLSPEC int SDLCALL SDL_GetWindowOpacity(SDL_Window * window, float * out_opacity);
+extern DECLSPEC int SDLCALL SDL_SetWindowModalFor(SDL_Window * modal_window, SDL_Window * parent_window);
+extern DECLSPEC int SDLCALL SDL_SetWindowInputFocus(SDL_Window * window);
+extern DECLSPEC int SDLCALL SDL_SetWindowGammaRamp(SDL_Window * window,
+extern DECLSPEC int SDLCALL SDL_GetWindowGammaRamp(SDL_Window * window,
+extern DECLSPEC int SDLCALL SDL_SetWindowHitTest(SDL_Window * window,
+extern DECLSPEC int SDLCALL SDL_FlashWindow(SDL_Window * window, SDL_FlashOperation operation);
+extern DECLSPEC void SDLCALL SDL_DestroyWindow(SDL_Window * window);
+extern DECLSPEC SDL_bool SDLCALL SDL_IsScreenSaverEnabled(void);
+extern DECLSPEC void SDLCALL SDL_EnableScreenSaver(void);
+extern DECLSPEC void SDLCALL SDL_DisableScreenSaver(void);
+extern DECLSPEC int SDLCALL SDL_GL_LoadLibrary(const char *path);
+extern DECLSPEC void *SDLCALL SDL_GL_GetProcAddress(const char *proc);
+extern DECLSPEC void SDLCALL SDL_GL_UnloadLibrary(void);
+extern DECLSPEC SDL_bool SDLCALL SDL_GL_ExtensionSupported(const char
+extern DECLSPEC void SDLCALL SDL_GL_ResetAttributes(void);
+extern DECLSPEC int SDLCALL SDL_GL_SetAttribute(SDL_GLattr attr, int value);
+extern DECLSPEC int SDLCALL SDL_GL_GetAttribute(SDL_GLattr attr, int *value);
+extern DECLSPEC SDL_GLContext SDLCALL SDL_GL_CreateContext(SDL_Window *
+extern DECLSPEC int SDLCALL SDL_GL_MakeCurrent(SDL_Window * window,
+extern DECLSPEC SDL_Window* SDLCALL SDL_GL_GetCurrentWindow(void);
+extern DECLSPEC SDL_GLContext SDLCALL SDL_GL_GetCurrentContext(void);
+extern DECLSPEC void SDLCALL SDL_GL_GetDrawableSize(SDL_Window * window, int *w,
+extern DECLSPEC int SDLCALL SDL_GL_SetSwapInterval(int interval);
+extern DECLSPEC int SDLCALL SDL_GL_GetSwapInterval(void);
+extern DECLSPEC void SDLCALL SDL_GL_SwapWindow(SDL_Window * window);
+extern DECLSPEC void SDLCALL SDL_GL_DeleteContext(SDL_GLContext context);
